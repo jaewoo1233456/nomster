@@ -1,5 +1,6 @@
 Nomster::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+gem 'rails_12factor', group: :production
 
   # Code is not reloaded between requests.
   config.cache_classes = true
