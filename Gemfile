@@ -3,7 +3,8 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
 gem 'sass-rails'
 gem 'devise', '>= 3.2.4'
-
+gem 'geocoder', "1.3.4"
+gem 'figaro', '>=1.0.0'
 
 gem 'simple_form'
 gem 'rails_12factor', group: :production
