@@ -11,7 +11,7 @@ Nomster::Application.configure do
     }
 
 
-  config.action_mailer.default_url_options = { host: 'nomster-jaewoo-park.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'nomster-jaewoo-park.herokuapp.com' }
 gem 'rails_12factor', group: :production
 
   # Code is not reloaded between requests.
