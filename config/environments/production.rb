@@ -1,15 +1,14 @@
 Nomster::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.sendgrid.net',
-    :port           => '587',
-    :authentication => :plain,
-    :user_name      => ENV['SENDGRID_USERNAME'],
-    :password       => ENV['SENDGRID_PASSWORD'],
+    :port           => ENV['MAILGUN_SMTP_PORT'],
+    :address        => ENV['MAILGUN_SMTP_SERVER'],
+    :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+    :password       => ENV['MAILGUN_SMTP_PASSWORD'],
     :domain         => 'nomster-jaewoo-park.herokuapp.com',
-    :enable_starttls_auto => true
-    }
-
+    :authentication => :plain,
+  }
+  ActionMailer::Base.delivery_method = :smtp
 
   config.action_mailer.default_url_options = { host: 'nomster-jaewoo-park.herokuapp.com' }
   gem 'rails_12factor', group: :production
