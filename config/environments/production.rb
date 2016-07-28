@@ -6,11 +6,13 @@ Nomster::Application.configure do
     :authentication => :plain,
     :user_name      => ENV['SENDGRID_USERNAME'],
     :password       => ENV['SENDGRID_PASSWORD'],
-    :domain         => 'heroku.com',
+    :domain         => 'https://nomster-jaewoo-park.herokuapp.com/',
     :enable_starttls_auto => true
     }
+  
+
   config.action_mailer.default_url_options = { host: 'nomster-jaewoo-park.herokuapp.com' }
-gem 'rails_12factor', group: :production
+  gem 'rails_12factor', group: :production
 
   # Code is not reloaded between requests.
   config.cache_classes = true
